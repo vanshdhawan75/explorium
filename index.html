@@ -254,6 +254,61 @@
       .demo-btn:hover {
         background: #ec4899;
       }     
+      .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 8px 36px 0 rgba(251, 191, 36, 0.14);
+  height: auto;
+  object-fit: cover;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #f59e42;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.about-main {
+  font-size: 1.18rem;
+  color: #be185d;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+
+.about-desc {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Responsive Grid for Smaller Devices */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .about-image img {
+    height: 200px;
+  }
+}
+
       @media (max-width: 900px) {
         .services-section, .about-section { padding: 0 6px; }
         .about-section { flex-direction: column-reverse; gap: 32px; }
@@ -407,21 +462,23 @@
         </div>
       </div>
     </section>
-    <section class="about-section" id="about">
-      <div class="about-txt">
-        <h3 class="about-title">Why Choose Us</h3>
-        <p class="about-main">
-          We blend <span style="font-weight:600; color:#ec4899;">creativity</span>, technology, and experience to bring your ideas to life.
-        </p>
-        <p class="about-desc">
-          Our team is passionate, diverse, and always ready to deliver unique solutions just for you.
-        </p>
-      </div>
-      <div class="about-img-wrap">
-        <img src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=500&q=80"
-          alt="Feature"/>
-      </div>
-    </section>
+    <section class="about-section" id="about" style="padding: 40px 16px; margin-bottom: 30px;">
+  <div class="about-grid">
+    <div class="about-text">
+      <h3 class="about-title">Why Choose Us</h3>
+      <p class="about-main">
+        We blend <span style="font-weight:600; color:#ec4899;">creativity</span>, technology, and experience to bring your ideas to life.
+      </p>
+      <p class="about-desc">
+        Our team is passionate, diverse, and always ready to deliver unique solutions just for you.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=500&q=80" alt="Feature" />
+    </div>
+  </div>
+</section>
+
     <div class="video-modal">
       <a
         href="https://www.youtube.com/watch?v=sgB8TjNKmSI"
